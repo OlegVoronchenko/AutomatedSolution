@@ -3,5 +3,5 @@ package org.selenide.AutomatedTests.GooglePages;
 /**
  * Created by Oleg Voronchenko on 4/28/2016.
  */
-public class PasswordPage extends GooglePage {
+public class EmailsPage extends GooglePage{
 }
