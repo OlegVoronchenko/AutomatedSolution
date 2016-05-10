@@ -1,15 +1,13 @@
 package org.selenide.AutomatedTests;
 
-import org.openqa.selenium.By;
 import org.selenide.AutomatedTests.GoogleTest.GoogleTest;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Condition.disappears;
-import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Configuration.startMaximized;
-import static com.codeborne.selenide.Configuration.timeout;
+import static com.codeborne.selenide.Configuration.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -19,15 +17,22 @@ import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
  * Created by Oleg Voronchenko on 4/28/2016.
  */
 public class GmaiAutorizationlTests extends GoogleTest {
-    BrowserActions actions = new BrowserActions();
+    private String gmailUrl = "gmail.com";
 
+    @BeforeTest
+    public void preparation() throws Exception{
+        site.navigation.NavigateTo(gmailUrl);
+
+    }
 
     @Test
     public void userCanAuthorizeToGmailTest() throws Exception {
+        site.navigation.NavigateTo(gmailUrl);
+
         /*actions.launchBrowser();
         actions.navigateToLink();
 
-        actions.enter*/
+        actions.enter
 
         
         open(baseUrl);
@@ -36,7 +41,7 @@ public class GmaiAutorizationlTests extends GoogleTest {
         $("#submit").click();
         //$(".loading_progress").should(disappear); // Waits until element disappears
         //$("#username").shouldHave(text("Hello, Johny!")); // Waits until element gets text
-
+*/
     }
 
 
