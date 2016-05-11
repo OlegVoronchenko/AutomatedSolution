@@ -1,21 +1,19 @@
 package org.selenide.AutomatedTests.pageobjs.features;
 
 import org.selenide.AutomatedTests.pageobjs.base.BaseFeature;
-
-import static com.codeborne.selenide.Selenide.close;
-import static com.codeborne.selenide.Selenide.open;
+import org.selenide.AutomatedTests.pageobjs.screens.SiteActions;
 
 /**
  * Created by Oleg Voronchenko on 5/10/2016.
  */
 public class NavigationFeature extends BaseFeature {
+    SiteActions actions = new SiteActions();
 
-    public void navigateTo(String url){
-
-        open(url);
+    public void navigateTo(String url) {
+        actions.openUrl(url);
     }
 
     public void closeSite() {
-        close();
+        actions.closeSite();
     }
 }
