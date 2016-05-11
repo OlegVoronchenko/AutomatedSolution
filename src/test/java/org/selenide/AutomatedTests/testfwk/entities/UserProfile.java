@@ -8,6 +8,10 @@ public class UserProfile {
     private String userEmail;
     private String userPassword;
 
+    public UserProfile(String email, String password){
+        userEmail = email;
+        userPassword = password;
+    }
     public UserProfile(String name, String email, String password){
         userName = name;
         userEmail = email;

@@ -1,8 +1,8 @@
 package org.selenide.AutomatedTests.pageobjs.features;
 
 import org.selenide.AutomatedTests.pageobjs.base.BaseFeature;
-import org.selenide.AutomatedTests.pageobjs.screens.LoginPage;
 import org.selenide.AutomatedTests.pageobjs.screens.EmailsPage;
+import org.selenide.AutomatedTests.pageobjs.screens.LoginPage;
 
 /**
  * Created by Oleg Voronchenko on 4/28/2016.
@@ -25,13 +25,14 @@ public class AuthorizationFeature extends BaseFeature {
     public void logOutFromAccount() {
         if(isUserLogged())
         {
-            logOut();
+            //logOut();
         }
     }
 
-
     public void logOut() {
-        loginPage.logOut();
+        //loginPage.logOut();
+        commonPage.clickOnUserBox();
+        commonPage.clickOnSignOutButton();
     }
 
     /* TO-DO user
@@ -56,5 +57,13 @@ public class AuthorizationFeature extends BaseFeature {
         if(password!=null) {
             loginPage.enterPassword(password);
         }
+    }
+
+    public void clickNext() {
+        loginPage.clickNextButton();
+    }
+
+    public void clickEnter() {
+        loginPage.clickEnterButton();
     }
 }

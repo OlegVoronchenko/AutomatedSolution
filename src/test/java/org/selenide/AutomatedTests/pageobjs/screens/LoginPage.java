@@ -2,8 +2,8 @@ package org.selenide.AutomatedTests.pageobjs.screens;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-import org.selenide.AutomatedTests.testfwk.entities.UserProfile;
 import org.selenide.AutomatedTests.testfwk.constants.CommonConstans;
+import org.selenide.AutomatedTests.testfwk.entities.UserProfile;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -17,7 +17,7 @@ public class LoginPage extends GooglePage {
     private SelenideElement nextButton;
     private SelenideElement enterButton;
 
-    //Need to be check
+    //User data
     UserProfile testUser;
 
     /**
@@ -95,7 +95,7 @@ public class LoginPage extends GooglePage {
      */
     public void enterEmailAddress(String email) {
         if(getEmailTextBox().isDisplayed()){
-            getEmailTextBox().setValue(email);
+            getEmailTextBox().sendKeys(email);
         }
     }
 
@@ -105,7 +105,7 @@ public class LoginPage extends GooglePage {
      */
     public void enterPassword(String password) {
         if(getPwdTextBox().isDisplayed()){
-            getPwdTextBox().setValue(password);
+            getPwdTextBox().sendKeys(password);
         }
     }
 
