@@ -1,10 +1,10 @@
-package org.selenide.AutomatedTests.pageobjs.screens;
+package org.selenide.autotests.pageobjs.screens;
 
 import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
 
 /**
- * Created by oleg.voronchenko on 4/28/2016.
+ * Created by Oleg Voronchenko on 4/28/2016.
  */
 public class SiteActions {
 

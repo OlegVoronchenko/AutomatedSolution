@@ -1,4 +1,4 @@
-package org.selenide.AutomatedTests;
+package org.selenide.autotests;
 
 /**
  * Hello world!

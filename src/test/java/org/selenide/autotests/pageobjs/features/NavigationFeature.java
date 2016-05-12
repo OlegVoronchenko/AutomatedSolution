@@ -1,7 +1,7 @@
-package org.selenide.AutomatedTests.pageobjs.features;
+package org.selenide.autotests.pageobjs.features;
 
-import org.selenide.AutomatedTests.pageobjs.base.BaseFeature;
-import org.selenide.AutomatedTests.pageobjs.screens.SiteActions;
+import org.selenide.autotests.pageobjs.base.BaseFeature;
+import org.selenide.autotests.pageobjs.screens.SiteActions;
 
 /**
  * Created by Oleg Voronchenko on 5/10/2016.
