@@ -1,4 +1,4 @@
-package org.selenide.AutomatedTests.testfwk.entities;
+package org.selenide.autotests.testfwk.entities;
 
 /**
  * Created by Oleg Voronchenko on 4/28/2016.

@@ -1,8 +1,8 @@
-package org.selenide.AutomatedTests.pageobjs;
+package org.selenide.autotests.pageobjs;
 
-import org.selenide.AutomatedTests.pageobjs.base.BaseSite;
-import org.selenide.AutomatedTests.pageobjs.features.AuthorizationFeature;
-import org.selenide.AutomatedTests.pageobjs.features.NavigationFeature;
+import org.selenide.autotests.pageobjs.base.BaseSite;
+import org.selenide.autotests.pageobjs.features.AuthorizationFeature;
+import org.selenide.autotests.pageobjs.features.NavigationFeature;
 
 /**
  * Created by Oleg Voronchenko on 5/10/2016.

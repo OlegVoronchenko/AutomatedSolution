@@ -1,8 +1,8 @@
-package org.selenide.AutomatedTests.pageobjs.features;
+package org.selenide.autotests.pageobjs.features;
 
-import org.selenide.AutomatedTests.pageobjs.base.BaseFeature;
-import org.selenide.AutomatedTests.pageobjs.screens.EmailsPage;
-import org.selenide.AutomatedTests.pageobjs.screens.LoginPage;
+import org.selenide.autotests.pageobjs.base.BaseFeature;
+import org.selenide.autotests.pageobjs.screens.EmailsPage;
+import org.selenide.autotests.pageobjs.screens.LoginPage;
 
 /**
  * Created by Oleg Voronchenko on 4/28/2016.
@@ -11,35 +11,25 @@ public class AuthorizationFeature extends BaseFeature {
     LoginPage loginPage = new LoginPage();
     EmailsPage commonPage = new EmailsPage();
 
-    String getPageName(){
-        return null;
-    }
-
-    String getFieldName(){
-        return null;
-    }
-
     /**
      * Logout from the account
      */
     public void logOutFromAccount() {
-        if(isUserLogged())
-        {
-            //logOut();
-        }
+        if(isUserLogged()) { logOut(); }
     }
 
+    /**
+     * Logging out
+     */
     public void logOut() {
-        //loginPage.logOut();
         commonPage.clickOnUserBox();
         commonPage.clickOnSignOutButton();
     }
 
-    /* TO-DO user
-    public void logIn() {
-        loginPage.logIn();
-    }*/
-
+    /**
+     * Is user logined
+     * @return
+     */
     public boolean isUserLogged() {
         if (loginPage.isUserLogged()) {
             return true;
@@ -47,22 +37,44 @@ public class AuthorizationFeature extends BaseFeature {
         return false;
     }
 
+    /**
+     * Enter email address to the address field
+     * @param email
+     */
     public void enterUserEmailAddress(String email) {
         if(email!=null) {
             loginPage.enterEmailAddress(email);
         }
     }
 
+    /**
+     * Enter password to the password field
+     * @param password
+     */
     public void enterUserPassword(String password) {
         if(password!=null) {
             loginPage.enterPassword(password);
         }
     }
 
+    /**
+     * Get user email address from the account information section
+     * @return email
+     */
+    public String getUserEmailAddress() {
+        return commonPage.getUserEmailText();
+    }
+
+    /**
+     * Click next button
+     */
     public void clickNext() {
         loginPage.clickNextButton();
     }
 
+    /**
+     * Click enter button
+     */
     public void clickEnter() {
         loginPage.clickEnterButton();
     }

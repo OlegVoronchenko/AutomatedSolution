@@ -1,4 +1,4 @@
-package org.selenide.AutomatedTests.pageobjs.base;
+package org.selenide.autotests.pageobjs.base;
 
 /**
  * Created by Oleg Voronchenko on 4/28/2016.
