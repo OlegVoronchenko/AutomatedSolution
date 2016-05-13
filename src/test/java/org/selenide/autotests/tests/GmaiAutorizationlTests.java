@@ -23,6 +23,7 @@ public class GmaiAutorizationlTests extends GTest {
         site.navigation.navigateTo(CommonConstans.COMMON_GMAIL_URL);
         site.authorization.logOutFromAccount();
         site.navigation.closeSite();
+        //WebDriverRunner.clearBrowserCache()
     }
 
     @Test
@@ -33,11 +34,14 @@ public class GmaiAutorizationlTests extends GTest {
         log.info("STEP -> Enter email address to the field");
         site.authorization.enterUserEmailAddress(user.getEmail());
 
+        Assert.assertEquals(site.authorization.getUserEmailOnLoginForm(), user.getEmail(),
+                "Verify that the " + user.getEmail() + " - email is presented");
+
         log.info("STEP -> Enter password to the field");
         site.authorization.enterUserPassword(user.getPassword());
 
         Assert.assertEquals(site.authorization.getUserEmailAddress(), user.getEmail(),
-                "Verify that the user is logined to the email box.");
+                "Verify that the user is authorized  the email box.");
 
         log.info("STEP -> Log out from site");
         site.authorization.logOut();
@@ -45,6 +49,7 @@ public class GmaiAutorizationlTests extends GTest {
 
     @AfterTest
     public void postConditions() {
+        log.info("STEP -> postLog out from site");
         site.navigation.closeSite();
     }
 

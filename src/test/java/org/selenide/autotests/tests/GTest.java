@@ -17,7 +17,7 @@ import static com.codeborne.selenide.Configuration.timeout;
  */
 public class GTest extends BaseTest {
     public static final GmailSite site = new GmailSite();
-    Logger log = LoggerFactory.getLogger(GTest.class);
+    Logger log = LoggerFactory.getLogger(BaseTest.class);
 
     @Rule
     public ScreenShooter screenShooter = new ScreenShooter();

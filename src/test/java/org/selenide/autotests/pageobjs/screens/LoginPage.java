@@ -14,10 +14,11 @@ import static com.codeborne.selenide.Selenide.$;
  */
 public class LoginPage extends GooglePage {
 
-    private SelenideElement emailTextBox = $(byId(CommonConstans.EMAIL_TEXT_BOX_ID));
-    private SelenideElement pwdTextBox = $(byId(CommonConstans.PWD_TEXT_BOX_ID));
-    private SelenideElement nextButton = $(byId(CommonConstans.NEXT_BUTTON_ID));
-    private SelenideElement enterButton = $(byId(CommonConstans.ENTER_BUTTON_ID));
+    SelenideElement emailTextBox = $(byId(CommonConstans.EMAIL_TEXT_BOX_ID));
+    SelenideElement pwdTextBox = $(byId(CommonConstans.PWD_TEXT_BOX_ID));
+    SelenideElement nextButton = $(byId(CommonConstans.NEXT_BUTTON_ID));
+    SelenideElement enterButton = $(byId(CommonConstans.ENTER_BUTTON_ID));
+    SelenideElement emailDisplayTitle = $(byId(CommonConstans.EMAIL_DISPLAY_TITLE_ID));
 
     public SelenideElement getEmailTextBox(){
         return this.emailTextBox;
@@ -70,6 +71,7 @@ public class LoginPage extends GooglePage {
      * @param user profile data
      */
     public void logIn(UserProfile user) {
+        waitUntilPagesIsLoaded();
         if(user!=null) {
             enterEmailAddress(user.getEmail());
             clickNextButton();
@@ -83,7 +85,8 @@ public class LoginPage extends GooglePage {
      * @return true or false
      */
     public boolean isUserLogged() {
-        if(emailTextBox.isDisplayed()){
+        waitUntilPagesIsLoaded();
+        if (emailTextBox.is(Condition.present)) {
             return false;
         }
         return true;
@@ -103,15 +106,23 @@ public class LoginPage extends GooglePage {
      * @param isConfirmRequired true or false
      */
     public void enterEmailAddress(String email, boolean isConfirmRequired) {
-        emailTextBox.should(Condition.appear);
-        if(emailTextBox.isDisplayed()) {
+       /* emailTextBox.waitUntil(Condition.present, commonTimeOut);
+        if (emailTextBox.is(Condition.appear)) {
             if (isConfirmRequired) {
                 emailTextBox.val(email).pressEnter();
-                waitUntilPagesIsLoaded();
             } else {
                 emailTextBox.sendKeys(email);
             }
-        }
+        }*/
+
+        /*if(emailTextBox.is(Condition.present)){*/
+            emailTextBox.waitWhile(Condition.appear, commonTimeOut);
+            if (isConfirmRequired) {
+                emailTextBox.val(email).pressEnter();
+            } else {
+                emailTextBox.sendKeys(email);
+            }
+
     }
 
     /**
@@ -128,8 +139,8 @@ public class LoginPage extends GooglePage {
      * @param isConfirmRequired true or false
      */
     public void enterPassword(String password, boolean isConfirmRequired) {
-        pwdTextBox.should(Condition.appear);
-        if (pwdTextBox.isDisplayed()) {
+        pwdTextBox.waitUntil(Condition.present, commonTimeOut);
+        if (pwdTextBox.is(Condition.appear)) {
             if (isConfirmRequired) {
                 pwdTextBox.val(password).pressEnter();
                 waitUntilPagesIsLoaded();
@@ -143,9 +154,10 @@ public class LoginPage extends GooglePage {
      * Click on the Next button
      */
     public void clickNextButton() {
-        if(nextButton.isDisplayed()) {
+        waitUntilPagesIsLoaded();
+        if (nextButton.is(Condition.appear)) {
             nextButton.click();
-            $(CommonConstans.ERROR_MSG).waitUntil(disappears, CommonConstans.DEFAULT_TIMEOUT);
+            $(CommonConstans.ERROR_MSG).waitUntil(disappears, commonTimeOut);
         }
     }
 
@@ -153,9 +165,31 @@ public class LoginPage extends GooglePage {
      * Click on the Enter button
      */
     public void clickEnterButton() {
-        if(enterButton.isDisplayed()) {
+        waitUntilPagesIsLoaded();
+        if (enterButton.is(Condition.appear)) {
             enterButton.click();
-            $(CommonConstans.ERROR_MSG).waitUntil(disappears, CommonConstans.DEFAULT_TIMEOUT);
+            $(CommonConstans.ERROR_MSG).waitUntil(disappears, commonTimeOut);
         }
+    }
+
+    /**
+     * Get user email displayed text
+     * @return email title
+     */
+    public String getUserEmail() {
+        /*
+        String email = "";
+        emailDisplayTitle.waitUntil(Condition.present, commonTimeOut);
+        if (emailDisplayTitle.is(Condition.appear)) {
+            email = emailDisplayTitle.getText();
+        }
+        return email;*/
+        String email = "";
+        if(emailDisplayTitle.is(Condition.present))
+        {
+            emailDisplayTitle.waitUntil(Condition.appear, commonTimeOut);
+            email = emailDisplayTitle.getText();
+        }
+        return email;
     }
 }
