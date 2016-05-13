@@ -12,8 +12,10 @@ import static com.codeborne.selenide.Selenide.$;
  */
 public class GooglePage extends BasePage {
 
+    int commonTimeOut = CommonConstans.DEFAULT_TIMEOUT;
+
     public void waitUntilPagesIsLoaded() {
-        $(byText(CommonConstans.LOADING)).waitUntil(disappears, CommonConstans.DEFAULT_TIMEOUT);
+        $(byText(CommonConstans.LOADING)).waitUntil(disappears, commonTimeOut);
     }
 
 }

@@ -7,6 +7,7 @@ import org.selenide.autotests.testfwk.constants.CommonConstans;
 
 import static com.codeborne.selenide.Selectors.byId;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.title;
 
 /**
  * Created by Oleg Voronchenko on 4/28/2016.
@@ -33,11 +34,29 @@ public class EmailsPage extends GooglePage {
         if(signOutButton.isDisplayed()) signOutButton.click();
     }
 
-    public String getUserEmailText(){
-        userBox.should(Condition.appear);
-        clickOnUserBox();
-        String email = userAccountEmail.getText();
-        clickOnUserBox();
+    public String getUserProfileEmail() {
+       /* String email = "";
+        userBox.waitUntil(Condition.present, commonTimeOut);
+        if (userBox.is(Condition.appear)) {
+            clickOnUserBox();
+            email = userAccountEmail.getText();
+            clickOnUserBox();
+        }
+        return email;*/
+        String title1 = title();
+        String email = "";
+        waitUntilPagesIsLoaded();
+        String title2 = title();
+        boolean sel = userBox.is(Condition.present);
+        email = "";
+        String title3 = title();
+
+        if(userBox.is(Condition.present)) {
+            userBox.waitUntil(Condition.appear, commonTimeOut);
+            clickOnUserBox();
+            email = userAccountEmail.getText();
+            clickOnUserBox();
+        }
         return email;
     }
 }

@@ -224,7 +224,7 @@
       <module fileurl="file://$PROJECT_DIR$/AutomatedSolution.iml" filepath="$PROJECT_DIR$/AutomatedSolution.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="Java SDK 1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
@@ -284,6 +284,50 @@
         <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: com.sun.istack:istack-commons-runtime:2.16">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/istack/istack-commons-runtime/2.16/istack-commons-runtime-2.16.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/istack/istack-commons-runtime/2.16/istack-commons-runtime-2.16-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/istack/istack-commons-runtime/2.16/istack-commons-runtime-2.16-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.xml.bind:jaxb-core:2.2.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-core/2.2.7/jaxb-core-2.2.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-core/2.2.7/jaxb-core-2.2.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-core/2.2.7/jaxb-core-2.2.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.xml.bind:jaxb-impl:2.2.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.2.7/jaxb-impl-2.2.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.2.7/jaxb-impl-2.2.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.2.7/jaxb-impl-2.2.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/fastinfoset/FastInfoset/1.2.12/FastInfoset-1.2.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/fastinfoset/FastInfoset/1.2.12/FastInfoset-1.2.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/fastinfoset/FastInfoset/1.2.12/FastInfoset-1.2.12-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: commons-beanutils:commons-beanutils-core:1.8.3">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils-core/1.8.3/commons-beanutils-core-1.8.3.jar!/" />
@@ -328,6 +372,28 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: javax.xml.bind:jaxb-api:2.2.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/bind/jaxb-api/2.2.7/jaxb-api-2.2.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: javax.xml.bind:jsr173_api:1.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/bind/jsr173_api/1.0/jsr173_api-1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/bind/jsr173_api/1.0/jsr173_api-1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/bind/jsr173_api/1.0/jsr173_api-1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: junit:junit:4.10">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/" />
@@ -337,6 +403,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: log4j:log4j:1.2.17">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: net.java.dev.jna:jna-platform:4.1.0">
@@ -394,26 +471,26 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.3/httpcore-4.4.3-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.tika:tika-core:1.7">
+    <library name="Maven: org.apache.tika:tika-core:1.5">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/tika/tika-core/1.7/tika-core-1.7.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/tika/tika-core/1.5/tika-core-1.5.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/tika/tika-core/1.7/tika-core-1.7-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/tika/tika-core/1.5/tika-core-1.5-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/tika/tika-core/1.7/tika-core-1.7-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/tika/tika-core/1.5/tika-core-1.5-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.aspectj:aspectjrt:1.8.3">
+    <library name="Maven: org.aspectj:aspectjrt:1.8.2">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.3/aspectjrt-1.8.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.2/aspectjrt-1.8.2.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.3/aspectjrt-1.8.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.2/aspectjrt-1.8.2-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.3/aspectjrt-1.8.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.2/aspectjrt-1.8.2-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.beanshell:bsh:2.0b4">
@@ -438,15 +515,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.jvnet.jaxb2_commons:jaxb2-basics-runtime:0.9.3">
+    <library name="Maven: org.jvnet.jaxb2_commons:jaxb2-basics-runtime:0.6.5">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/jaxb2_commons/jaxb2-basics-runtime/0.9.3/jaxb2-basics-runtime-0.9.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/jaxb2_commons/jaxb2-basics-runtime/0.6.5/jaxb2-basics-runtime-0.6.5.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/jaxb2_commons/jaxb2-basics-runtime/0.9.3/jaxb2-basics-runtime-0.9.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/jaxb2_commons/jaxb2-basics-runtime/0.6.5/jaxb2-basics-runtime-0.6.5-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/jaxb2_commons/jaxb2-basics-runtime/0.9.3/jaxb2-basics-runtime-0.9.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/jaxb2_commons/jaxb2-basics-runtime/0.6.5/jaxb2-basics-runtime-0.6.5-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.seleniumhq.selenium:selenium-api:2.53.0">
@@ -592,59 +669,59 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/1.6/snakeyaml-1.6-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: ru.yandex.qatools.allure:allure-java-adaptor-api:1.4.23">
+    <library name="Maven: ru.yandex.qatools.allure:allure-java-adaptor-api:1.4.1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-adaptor-api/1.4.23/allure-java-adaptor-api-1.4.23.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-adaptor-api/1.4.1/allure-java-adaptor-api-1.4.1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-adaptor-api/1.4.23/allure-java-adaptor-api-1.4.23-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-adaptor-api/1.4.1/allure-java-adaptor-api-1.4.1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-adaptor-api/1.4.23/allure-java-adaptor-api-1.4.23-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-adaptor-api/1.4.1/allure-java-adaptor-api-1.4.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: ru.yandex.qatools.allure:allure-java-annotations:1.4.23">
+    <library name="Maven: ru.yandex.qatools.allure:allure-java-annotations:1.4.1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-annotations/1.4.23/allure-java-annotations-1.4.23.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-annotations/1.4.1/allure-java-annotations-1.4.1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-annotations/1.4.23/allure-java-annotations-1.4.23-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-annotations/1.4.1/allure-java-annotations-1.4.1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-annotations/1.4.23/allure-java-annotations-1.4.23-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-annotations/1.4.1/allure-java-annotations-1.4.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: ru.yandex.qatools.allure:allure-java-aspects:1.4.23">
+    <library name="Maven: ru.yandex.qatools.allure:allure-java-aspects:1.4.1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-aspects/1.4.23/allure-java-aspects-1.4.23.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-aspects/1.4.1/allure-java-aspects-1.4.1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-aspects/1.4.23/allure-java-aspects-1.4.23-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-aspects/1.4.1/allure-java-aspects-1.4.1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-aspects/1.4.23/allure-java-aspects-1.4.23-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-java-aspects/1.4.1/allure-java-aspects-1.4.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: ru.yandex.qatools.allure:allure-model:1.4.23">
+    <library name="Maven: ru.yandex.qatools.allure:allure-model:1.4.1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-model/1.4.23/allure-model-1.4.23.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-model/1.4.1/allure-model-1.4.1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-model/1.4.23/allure-model-1.4.23-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-model/1.4.1/allure-model-1.4.1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-model/1.4.23/allure-model-1.4.23-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-model/1.4.1/allure-model-1.4.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: ru.yandex.qatools.allure:allure-testng-adaptor:1.4.23">
+    <library name="Maven: ru.yandex.qatools.allure:allure-testng-adaptor:1.4.1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-testng-adaptor/1.4.23/allure-testng-adaptor-1.4.23.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-testng-adaptor/1.4.1/allure-testng-adaptor-1.4.1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-testng-adaptor/1.4.23/allure-testng-adaptor-1.4.23-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-testng-adaptor/1.4.1/allure-testng-adaptor-1.4.1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-testng-adaptor/1.4.23/allure-testng-adaptor-1.4.23-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/ru/yandex/qatools/allure/allure-testng-adaptor/1.4.1/allure-testng-adaptor-1.4.1-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: ru.yandex.qatools.properties:properties-loader:1.5">

@@ -62,7 +62,7 @@ public class AuthorizationFeature extends BaseFeature {
      * @return email
      */
     public String getUserEmailAddress() {
-        return commonPage.getUserEmailText();
+        return commonPage.getUserProfileEmail();
     }
 
     /**
@@ -77,5 +77,13 @@ public class AuthorizationFeature extends BaseFeature {
      */
     public void clickEnter() {
         loginPage.clickEnterButton();
+    }
+
+    /**
+     * Get user email address from the password form
+     * @return email
+     */
+    public String getUserEmailOnLoginForm() {
+        return loginPage.getUserEmail();
     }
 }
