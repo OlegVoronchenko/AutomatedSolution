@@ -58,10 +58,26 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>${mavensurefire.version}</version>
             <configuration>
-                <testFailureIgnore>false</testFailureIgnore>
+                <testFailureIgnore>true</testFailureIgnore>
                 <argLine>
                     -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
                 </argLine>
+                <properties>
+                    <property>
+                        <name>listener</name>
+                        <value>ru.yandex.qatools.allure.testng.AllureTestListener</value>
+                    </property>
+                </properties>
+                <systemProperties>
+                     <property>
+                            <name>gmail.username</name>
+                            <value>enter-your-gmail-username</value>
+                     </property>
+                    <property>
+                        <name>gmail.password</name>
+                        <value>enter-your-gmail-password</value>
+                    </property>
+                </systemProperties>
             </configuration>
             <dependencies>
                 <dependency>

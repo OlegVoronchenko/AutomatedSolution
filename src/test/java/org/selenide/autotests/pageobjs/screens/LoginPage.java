@@ -19,12 +19,15 @@ public class LoginPage extends GooglePage {
     SelenideElement nextButton = $(byId(CommonConstans.NEXT_BUTTON_ID));
     SelenideElement enterButton = $(byId(CommonConstans.ENTER_BUTTON_ID));
     SelenideElement emailDisplayTitle = $(byId(CommonConstans.EMAIL_DISPLAY_TITLE_ID));
+    SelenideElement emailErrorMessage = $(byId(CommonConstans.EMAIL_ERROR_ID));
+    SelenideElement passwordErrorMessage = $(byId(CommonConstans.PASSWORD_ERROR_ID));
 
-    public SelenideElement getEmailTextBox(){
+
+    public SelenideElement getEmailTextBox() {
         return this.emailTextBox;
     }
 
-    public SelenideElement getPwdTextBox(){
+    public SelenideElement getPwdTextBox() {
         return this.pwdTextBox;
     }
 
@@ -39,40 +42,43 @@ public class LoginPage extends GooglePage {
     /**
      * Click on the email text field
      */
-    void clickOnEmailTextBox(){
+    void clickOnEmailTextBox() {
         emailTextBox.click();
     }
 
     /**
      * Click on the password text field
      */
-    void clickOnPwdTextBox(){
+    void clickOnPwdTextBox() {
         pwdTextBox.click();
     }
 
     /**
      * Check if the email text field is displayed
+     *
      * @return true or false
      */
-    boolean isEmailFieldDisplayed(){
+    boolean isEmailFieldDisplayed() {
         return emailTextBox.isDisplayed();
     }
 
     /**
      * Check if the password text field is displayed
+     *
      * @return true or false
      */
-    boolean isPwdFieldDisplayed(){
+    boolean isPwdFieldDisplayed() {
         return pwdTextBox.isDisplayed();
     }
 
     /**
      * Login to the email account
+     *
      * @param user profile data
      */
     public void logIn(UserProfile user) {
-        waitUntilPagesIsLoaded();
-        if(user!=null) {
+        waitUntilPageIsLoaded();
+        if (user != null) {
             enterEmailAddress(user.getEmail());
             clickNextButton();
             enterPassword(user.getPassword());
@@ -82,10 +88,11 @@ public class LoginPage extends GooglePage {
 
     /**
      * Check if the user login
+     *
      * @return true or false
      */
     public boolean isUserLogged() {
-        waitUntilPagesIsLoaded();
+        waitUntilPageIsLoaded();
         if (emailTextBox.is(Condition.present)) {
             return false;
         }
@@ -94,6 +101,7 @@ public class LoginPage extends GooglePage {
 
     /**
      * Enter user's email in the email text box with confirmation
+     *
      * @param email
      */
     public void enterEmailAddress(String email) {
@@ -102,31 +110,24 @@ public class LoginPage extends GooglePage {
 
     /**
      * Enter user's email in the email text box
+     *
      * @param email
      * @param isConfirmRequired true or false
      */
     public void enterEmailAddress(String email, boolean isConfirmRequired) {
-       /* emailTextBox.waitUntil(Condition.present, commonTimeOut);
+        emailTextBox.waitUntil(Condition.present, defaultTimeout);
         if (emailTextBox.is(Condition.appear)) {
             if (isConfirmRequired) {
                 emailTextBox.val(email).pressEnter();
             } else {
                 emailTextBox.sendKeys(email);
             }
-        }*/
-
-        /*if(emailTextBox.is(Condition.present)){*/
-            emailTextBox.waitWhile(Condition.appear, commonTimeOut);
-            if (isConfirmRequired) {
-                emailTextBox.val(email).pressEnter();
-            } else {
-                emailTextBox.sendKeys(email);
-            }
-
+        }
     }
 
     /**
      * Enter user's password in the password text box with confirmation
+     *
      * @param password
      */
     public void enterPassword(String password) {
@@ -135,15 +136,16 @@ public class LoginPage extends GooglePage {
 
     /**
      * Enter user's email in the email text box
+     *
      * @param password
      * @param isConfirmRequired true or false
      */
     public void enterPassword(String password, boolean isConfirmRequired) {
-        pwdTextBox.waitUntil(Condition.present, commonTimeOut);
+        pwdTextBox.waitUntil(Condition.present, defaultTimeout);
         if (pwdTextBox.is(Condition.appear)) {
             if (isConfirmRequired) {
                 pwdTextBox.val(password).pressEnter();
-                waitUntilPagesIsLoaded();
+                waitUntilPageIsLoaded();
             } else {
                 pwdTextBox.sendKeys(password);
             }
@@ -154,10 +156,10 @@ public class LoginPage extends GooglePage {
      * Click on the Next button
      */
     public void clickNextButton() {
-        waitUntilPagesIsLoaded();
+        waitUntilPageIsLoaded();
         if (nextButton.is(Condition.appear)) {
             nextButton.click();
-            $(CommonConstans.ERROR_MSG).waitUntil(disappears, commonTimeOut);
+            $(CommonConstans.ERROR_MSG).waitUntil(disappears, defaultTimeout);
         }
     }
 
@@ -165,31 +167,38 @@ public class LoginPage extends GooglePage {
      * Click on the Enter button
      */
     public void clickEnterButton() {
-        waitUntilPagesIsLoaded();
+        waitUntilPageIsLoaded();
         if (enterButton.is(Condition.appear)) {
             enterButton.click();
-            $(CommonConstans.ERROR_MSG).waitUntil(disappears, commonTimeOut);
+            $(CommonConstans.ERROR_MSG).waitUntil(disappears, defaultTimeout);
         }
     }
 
     /**
      * Get user email displayed text
+     *
      * @return email title
      */
     public String getUserEmail() {
-        /*
         String email = "";
-        emailDisplayTitle.waitUntil(Condition.present, commonTimeOut);
+        emailDisplayTitle.waitUntil(Condition.present, defaultTimeout);
         if (emailDisplayTitle.is(Condition.appear)) {
             email = emailDisplayTitle.getText();
         }
-        return email;*/
-        String email = "";
-        if(emailDisplayTitle.is(Condition.present))
-        {
-            emailDisplayTitle.waitUntil(Condition.appear, commonTimeOut);
-            email = emailDisplayTitle.getText();
-        }
         return email;
+    }
+
+    public boolean isEmailErrorMessageDisplayed() {
+        nextButton.waitWhile(Condition.disabled, defaultTimeout);
+        return emailErrorMessage.is(Condition.appears);
+    }
+
+    public boolean isPasswordErrorMessageDisplayed() {
+        enterButton.waitWhile(Condition.disabled, defaultTimeout);
+        return passwordErrorMessage.is(Condition.appears);
+    }
+
+    public void waitForMailLoading() {
+        waitUntilPageIsLoaded(CommonConstans.EMAIL_LOADING_TIMEOUT);
     }
 }

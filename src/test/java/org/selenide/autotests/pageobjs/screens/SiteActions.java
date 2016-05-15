@@ -9,7 +9,9 @@ import static com.codeborne.selenide.Selenide.open;
 public class SiteActions {
 
     public void openUrl(String url){
-        open(url);
+        if(url!=null) {
+            open(url);
+        }
     }
 
     public void closeSite() {

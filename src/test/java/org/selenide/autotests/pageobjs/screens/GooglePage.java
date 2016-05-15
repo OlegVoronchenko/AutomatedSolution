@@ -11,11 +11,15 @@ import static com.codeborne.selenide.Selenide.$;
  * Created by Oleg Voronchenko on 4/28/2016.
  */
 public class GooglePage extends BasePage {
+    int defaultTimeout = CommonConstans.DEFAULT_TIMEOUT;
+    int longTimeout = CommonConstans.LONG_TIMEOUT;
 
-    int commonTimeOut = CommonConstans.DEFAULT_TIMEOUT;
+    public void waitUntilPageIsLoaded() {
+        waitUntilPageIsLoaded(defaultTimeout);
+    }
 
-    public void waitUntilPagesIsLoaded() {
-        $(byText(CommonConstans.LOADING)).waitUntil(disappears, commonTimeOut);
+    public void waitUntilPageIsLoaded(int timeOut){
+        $(byText(CommonConstans.LOADING)).waitUntil(disappears, timeOut);
     }
 
 }
