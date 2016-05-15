@@ -33,7 +33,8 @@ public class GTest extends BaseTest {
     }
 
     private void configuration(){
-        startMaximized = false;
+        startMaximized = true;
         timeout = 10000;
+        //WebDriverRunner.setWebDriver(new InternetExplorerDriver());
     }
 }

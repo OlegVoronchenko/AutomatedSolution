@@ -4,7 +4,9 @@ package org.selenide.autotests.testfwk.constants;
  * Created by Oleg Voronchenko on 4/28/2016.
  */
 public class CommonConstans {
-    public static final int DEFAULT_TIMEOUT = 30000;
+    public static final int DEFAULT_TIMEOUT = 5000;
+    public static final int LONG_TIMEOUT = 10000;
+    public static final int EMAIL_LOADING_TIMEOUT =30000;
 
     //region - Gmail address
     public static final String COMMON_GMAIL_URL = "https://gmail.com";
@@ -18,6 +20,8 @@ public class CommonConstans {
     public static final String NEXT_BUTTON_ID = "next";
     public static final String ENTER_BUTTON_ID = "signIn";
     public static final String EMAIL_DISPLAY_TITLE_ID = "email-display";
+    public static final String EMAIL_ERROR_ID = "errormsg_0_Email";
+    public static final String PASSWORD_ERROR_ID = "errormsg_0_Passwd";
     //endregion
 
     //region Emails screen section
@@ -27,10 +31,10 @@ public class CommonConstans {
     //endregion
     //endregion
 
-    //region - Predefined user's data section
+    //region - Predefined user test data section
     public static final String USER_NAME = "Xxx Yyy";
-    public static final String USER_EMAIL_ADDRESS = "xx.xx.xx.yy.yy.yy.zz.zz@gmail.com";
-    public static final String USER_PASSWORD = "qwerty123456@";
+    public static final String USER_EMAIL_ADDRESS = "xx.xx.xx.yy.yy.yy.zz.zz.zz@gmail.com";
+    public static final String USER_PASSWORD = "zzqwerty123456@";
     //endregion
 
     //region - Additional site elements

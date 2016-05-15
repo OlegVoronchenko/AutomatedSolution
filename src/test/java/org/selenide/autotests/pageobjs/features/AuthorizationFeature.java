@@ -3,6 +3,7 @@ package org.selenide.autotests.pageobjs.features;
 import org.selenide.autotests.pageobjs.base.BaseFeature;
 import org.selenide.autotests.pageobjs.screens.EmailsPage;
 import org.selenide.autotests.pageobjs.screens.LoginPage;
+import ru.yandex.qatools.allure.annotations.Step;
 
 /**
  * Created by Oleg Voronchenko on 4/28/2016.
@@ -14,6 +15,7 @@ public class AuthorizationFeature extends BaseFeature {
     /**
      * Logout from the account
      */
+    @Step
     public void logOutFromAccount() {
         if(isUserLogged()) { logOut(); }
     }
@@ -21,6 +23,7 @@ public class AuthorizationFeature extends BaseFeature {
     /**
      * Logging out
      */
+    @Step
     public void logOut() {
         commonPage.clickOnUserBox();
         commonPage.clickOnSignOutButton();
@@ -28,7 +31,7 @@ public class AuthorizationFeature extends BaseFeature {
 
     /**
      * Is user logined
-     * @return
+     * @return true or false
      */
     public boolean isUserLogged() {
         if (loginPage.isUserLogged()) {
@@ -41,6 +44,7 @@ public class AuthorizationFeature extends BaseFeature {
      * Enter email address to the address field
      * @param email
      */
+    @Step("Enter email address to the address field")
     public void enterUserEmailAddress(String email) {
         if(email!=null) {
             loginPage.enterEmailAddress(email);
@@ -51,6 +55,7 @@ public class AuthorizationFeature extends BaseFeature {
      * Enter password to the password field
      * @param password
      */
+    @Step("Enter password to the password field")
     public void enterUserPassword(String password) {
         if(password!=null) {
             loginPage.enterPassword(password);
@@ -68,6 +73,7 @@ public class AuthorizationFeature extends BaseFeature {
     /**
      * Click next button
      */
+    @Step("Click next button")
     public void clickNext() {
         loginPage.clickNextButton();
     }
@@ -75,6 +81,7 @@ public class AuthorizationFeature extends BaseFeature {
     /**
      * Click enter button
      */
+    @Step("Click enter button")
     public void clickEnter() {
         loginPage.clickEnterButton();
     }
@@ -85,5 +92,29 @@ public class AuthorizationFeature extends BaseFeature {
      */
     public String getUserEmailOnLoginForm() {
         return loginPage.getUserEmail();
+    }
+
+    /**
+     * Is Email error message displayed
+     * @return true or false
+     */
+    public boolean isEmailErrorMessageDisplayed() {
+        return loginPage.isEmailErrorMessageDisplayed();
+    }
+
+    /**
+     * Is Password error message displayed
+     * @return true or false
+     */
+    public boolean isPasswordErrorMessageDisplayed() {
+        return loginPage.isPasswordErrorMessageDisplayed();
+    }
+
+    /**
+     * Wait for email loading
+     */
+    @Step("Wait for email loading")
+    public void waitForMailLoading() {
+        loginPage.waitForMailLoading();
     }
 }
